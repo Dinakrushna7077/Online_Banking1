@@ -75,6 +75,7 @@
     <Content Include="Create_New_Account.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home_Page.aspx" />
+    <Content Include="Root\Js\Nominee.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
