@@ -66,12 +66,18 @@
             border-bottom: 1px solid;
             letter-spacing: 1px;
         }
+        #lbl_msg
+        {
+            color:orangered;
+            display:none;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server" enctype="multipart/form-data">
         <div class="container">
             <div class="left">
+                <div class="element">Bank Name : </div>
                 <div class="element">Name : </div>
                 <div class="element">
                     Father Name :
@@ -90,13 +96,16 @@
             </div>
             <div class="left">
                 <div class="element">
+                    <asp:DropDownList ID="drp_bank" runat="server" AutoPostBack="True" OnSelectedIndexChanged="drp_bank_SelectedIndexChanged"></asp:DropDownList>
+                </div>
+                <div class="element">
                     <asp:TextBox ID="txt_name" runat="server" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
                     <asp:TextBox ID="txt_fname" runat="server" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_dob" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_dob" runat="server" CssClass="txtbox" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="element">
                     <asp:TextBox ID="txt_mail" runat="server" CssClass="txtbox"></asp:TextBox>
@@ -162,13 +171,13 @@
                     <asp:TextBox ID="txt_pan" runat="server" CssClass="txtbox" MaxLength="8"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_branch" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_branch" runat="server" CssClass="txtbox" ReadOnly="true"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_branch_code" runat="server" CssClass="txtbox" MaxLength="6"></asp:TextBox>
+                    <asp:TextBox ID="txt_branch_code" runat="server" CssClass="txtbox" ReadOnly="true" MaxLength="6"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_ifsc" runat="server" CssClass="txtbox" MaxLength="10"></asp:TextBox>
+                    <asp:TextBox ID="txt_ifsc" runat="server" CssClass="txtbox" ReadOnly="true" MaxLength="10"></asp:TextBox>
                 </div>
                 <div class="element">
                     <asp:RadioButton ID="rb_saving" runat="server" GroupName="ac_type" Text="Saving" /><asp:RadioButton ID="rb_current" runat="server" GroupName="ac_type" Text="Current" /><asp:RadioButton ID="rb_fd" runat="server" GroupName="ac_type" Text="Fixed" />
@@ -177,10 +186,13 @@
                     <asp:RadioButton ID="rb_single" runat="server" GroupName="ac_mode" Text="Single" /><asp:RadioButton ID="rb_joint" runat="server" GroupName="ac_mode" Text="Joint" />
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_doo" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_doo" runat="server" CssClass="txtbox" ReadOnly="True"></asp:TextBox>
                 </div>
 
             </div>
+        </div>
+        <div>
+            <asp:Label ID="lbl_msg" runat="server" Text=""></asp:Label>
         </div>
         <div class="btn_box">
             <asp:Button ID="btn_create" runat="server" Text="Create" OnClick="btn_create_Click" />

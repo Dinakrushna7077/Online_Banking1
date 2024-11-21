@@ -78,13 +78,49 @@ namespace Online_Banking_1._1
         protected global::System.Web.UI.WebControls.RadioButton rb_other;
 
         /// <summary>
-        /// txt_mob control.
+        /// txt_Relation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_mob;
+        protected global::System.Web.UI.WebControls.TextBox txt_Relation;
+
+        /// <summary>
+        /// txt_Mobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Mobile;
+
+        /// <summary>
+        /// txt_Adhar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Adhar;
+
+        /// <summary>
+        /// txt_Admin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_Admin;
+
+        /// <summary>
+        /// lbl_Msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Msg;
 
         /// <summary>
         /// btn_create control.

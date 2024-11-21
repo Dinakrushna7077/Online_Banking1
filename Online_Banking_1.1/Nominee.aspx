@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Nomini Details</title>
+    <script src="Root/Js/Nominee.js"></script>
     <style>
         body {
             height: 100vh;
@@ -20,7 +21,7 @@
         }
 
         .container {
-            height: 85vh;
+            height: 55vh;
             width: 100vw;
             /*background-color:gray;*/
             display: flex;
@@ -65,82 +66,62 @@
             border-bottom: 1px solid;
             letter-spacing: 1px;
         }
+        #lbl_Msg
+        {
+            display:none;
+            color:orangered;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-
         <div class="container">
             <div class="left">
                 <div class="element">Account Number : </div>
                 <div class="element">Nominee Name : </div>
-
-
                 <div class="element">DOB Of Nominee:</div>
-
-
                 <div class="element">gender </div>
-
-
-
             </div>
             <div class="left">
                 <div class="element">
-                    <asp:TextBox ID="txt_account" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_account" runat="server" ReadOnly="true" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
                     <asp:TextBox ID="txt_nname" runat="server" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_nDob" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_nDob" runat="server" CssClass="txtbox" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:RadioButton ID="rb_male" runat="server" GroupName="gender" Text="Male" /><asp:RadioButton ID="rbfemale" runat="server" GroupName="gender" Text="Female" /><asp:RadioButton ID="rb_other" runat="server" GroupName="gender" Text="Other" />
+                    <asp:RadioButton ID="rb_male" runat="server" GroupName="gender" Text="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButton ID="rbfemale" runat="server" GroupName="gender" Text="Female" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButton ID="rb_other" runat="server" GroupName="gender" Text="Other" />
                 </div>
-
-
-
-
-
-
-
-
             </div>
             <div class="right">
-                <div class="element">
-                    Relation :
-
-                </div>
-                <div class="element">
-                    Mobile No : 
-                </div>
-                <div class="element">
-                    Adhar Number :
-
-                </div>
-                <div class="element">photo :</div>
-
+                <div class="element">Relation :</div>
+                <div class="element">Mobile No : </div>
+                <div class="element">Adhar Number :</div>
                 <div class="element">Admin Id :</div>
-
-
             </div>
             <div class="right">
                 <div class="element">
-                    <asp:TextBox ID="txt_mob" runat="server" MaxLength="10" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_Relation" runat="server" CssClass="txtbox"></asp:TextBox>
                 </div>
-
-
-
-
-
-
-
-
-
+                <div class="element">
+                    <asp:TextBox ID="txt_Mobile" runat="server" MaxLength="10" CssClass="txtbox"></asp:TextBox>
+                </div>
+                <div class="element">
+                    <asp:TextBox ID="txt_Adhar" runat="server" MaxLength="12" CssClass="txtbox"></asp:TextBox>
+                </div>
+                <div class="element">
+                    <asp:TextBox ID="txt_Admin" runat="server"  CssClass="txtbox" ReadOnly="True"></asp:TextBox>
+                </div>
             </div>
         </div>
+        <div class="element">
+            <asp:Label ID="lbl_Msg" runat="server" Text="Label"></asp:Label>
+        </div>
         <div class="btn_box">
-            <asp:Button ID="btn_create" runat="server" Text="Create" />
+            <asp:Button ID="btn_create" runat="server" Text="Create" OnClick="Btn_create_Click" OnClientClick="return validation()" />
         </div>
     </form>
 </body>
