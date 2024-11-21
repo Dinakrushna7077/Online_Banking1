@@ -24,6 +24,15 @@ namespace Online_Banking_1._1
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// drp_bank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drp_bank;
+
+        /// <summary>
         /// txt_name control.
         /// </summary>
         /// <remarks>
@@ -247,6 +256,15 @@ namespace Online_Banking_1._1
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_doo;
+
+        /// <summary>
+        /// lbl_msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_msg;
 
         /// <summary>
         /// btn_create control.

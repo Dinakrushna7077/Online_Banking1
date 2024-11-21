@@ -45,10 +45,12 @@
         msg.style.display = "block";
         return false
     }
-    else if (Adhar.length<12) {
+    else if (Adhar.length < 12) {
         msg.innerHTML = "Please Enter A Valid Adhar Number...";
         msg.style.display = "block";
         return false
     }
-    alert("working");
+    else {
+        return true;
+    }
 }

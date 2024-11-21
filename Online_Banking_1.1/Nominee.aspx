@@ -90,7 +90,7 @@
                     <asp:TextBox ID="txt_nname" runat="server" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_nDob" runat="server" CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_nDob" runat="server" CssClass="txtbox" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="element">
                     <asp:RadioButton ID="rb_male" runat="server" GroupName="gender" Text="Male" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButton ID="rbfemale" runat="server" GroupName="gender" Text="Female" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RadioButton ID="rb_other" runat="server" GroupName="gender" Text="Other" />
@@ -113,7 +113,7 @@
                     <asp:TextBox ID="txt_Adhar" runat="server" MaxLength="12" CssClass="txtbox"></asp:TextBox>
                 </div>
                 <div class="element">
-                    <asp:TextBox ID="txt_Admin" runat="server"  CssClass="txtbox"></asp:TextBox>
+                    <asp:TextBox ID="txt_Admin" runat="server"  CssClass="txtbox" ReadOnly="True"></asp:TextBox>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
             <asp:Label ID="lbl_Msg" runat="server" Text="Label"></asp:Label>
         </div>
         <div class="btn_box">
-            <asp:Button ID="btn_create" runat="server" Text="Create" OnClick="btn_create_Click" OnClientClick="return validation()" />
+            <asp:Button ID="btn_create" runat="server" Text="Create" OnClick="Btn_create_Click" OnClientClick="return validation()" />
         </div>
     </form>
 </body>
